@@ -37,10 +37,39 @@ class _MenuPageState extends State<MenuPage> {
             itemBuilder: (BuildContext context, int index) {
               // Daftar ikon, warna, dan halaman untuk navigasi
               List<Map<String, dynamic>> items = [
-                {'icon': Icons.dashboard, 'label': 'Dashboard', 'iconColor': Colors.blue, 'textColor': Colors.black, 'page': const DashboardPage()},
-                {'icon': Icons.add, 'label': 'Add', 'iconColor': Colors.red, 'textColor': Colors.black, 'page': const AddPage()},
-                {'icon': Icons.update, 'label': 'Update', 'iconColor': Colors.green, 'textColor': Colors.black, 'page': const UpdatePage(kodeProduk: "Faktur 001", tanggalPenjualan: "23/10/2024", namaCustomer: "M Fachriza Farhan", jumlahBarang: 10, totalPenjualan: 100000)},
-                {'icon': Icons.logout, 'label': 'Logout', 'iconColor': Colors.grey, 'textColor': Colors.black, 'page': const LoginPage()},
+                {
+                  'icon': Icons.dashboard,
+                  'label': 'Dashboard',
+                  'iconColor': Colors.blue,
+                  'textColor': Colors.black,
+                  'page': const DashboardPage()
+                },
+                {
+                  'icon': Icons.add,
+                  'label': 'Add',
+                  'iconColor': Colors.red,
+                  'textColor': Colors.black,
+                  'page': const AddPage()
+                },
+                {
+                  'icon': Icons.update,
+                  'label': 'Update',
+                  'iconColor': Colors.green,
+                  'textColor': Colors.black,
+                  'page': const UpdatePage(
+                      kodeProduk: "Faktur 001",
+                      tanggalPenjualan: "23/10/2024",
+                      namaCustomer: "M Fachriza Farhan",
+                      jumlahBarang: 10,
+                      totalPenjualan: 100000)
+                },
+                {
+                  'icon': Icons.logout,
+                  'label': 'Logout',
+                  'iconColor': Colors.grey,
+                  'textColor': Colors.black,
+                  'page': const LoginPage()
+                },
               ];
 
               return GestureDetector(
@@ -51,6 +80,8 @@ class _MenuPageState extends State<MenuPage> {
                   );
                 }, // Fungsi yang akan dipanggil saat kotak diklik
                 child: Container(
+                  width: 150, // Ukuran lebar kotak statis
+                  height: 150, // Ukuran tinggi kotak statis
                   color: Colors.white, // Warna kotak putih
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
